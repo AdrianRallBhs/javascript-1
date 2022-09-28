@@ -1,4 +1,4 @@
-const core = require ("@actions/core");
+const core = require("@actions/core");
 
 const firstGreeting = core.getInput("first-greeting");
 const secondGreeting = core.getInput("second-greeting");
@@ -6,7 +6,7 @@ const lastGreeting = core.getInput("last-greeting");
 
 async function run() {
     try {
-        if(firstGreeting) {
+        if (firstGreeting) {
             core.setOutput(("last one greeted", firstGreeting));
         } else if (secondGreeting) {
             core.setOutput(("last one greeted", secondGreeting));
@@ -19,6 +19,6 @@ async function run() {
 }
 
 run();
-console.log("The first one to be greeted was ${firstGreeting}!");
-console.log("The second one to be greeted was ${secondGreeting}!");
-console.log("The third one to be greeted was ${lastGreeting}!");
+console.log("The first one to be greeted was ${{ firstGreeting}}!");
+console.log("The second one to be greeted was ${{ secondGreeting }}!");
+console.log("The third one to be greeted was ${{ lastGreeting }}!");

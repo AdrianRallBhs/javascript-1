@@ -1,0 +1,25 @@
+name: "my javacript action"
+
+description: "Simple Greeting"
+
+input:
+  first:
+    description: "who would like to greet in to the console?"
+    required: true
+    default: "Hubot"
+  second:
+    description: "another person to greet"
+    required: true
+    default: "Mona"
+  last:
+    description: "last person to greet"
+    required: true
+    default: "Adrian"
+
+outputs:
+  third:
+    description: "this person was last for greeting"
+
+runs:
+  using: "node12"
+  main: "index.js"
